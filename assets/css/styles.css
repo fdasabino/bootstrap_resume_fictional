@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-/* -------------------------------------------------------------Colours */
+
+/*--------------------------------------------Colors*/
+
 .bg-color-name-title {
   background-color: #676767;
 }
@@ -12,19 +9,49 @@
 .ui-menu-color-home {
   background-color: #e67e22;
 }
+
 .ui-menu-color-resume {
   background-color: #9b59b6;
 }
+
 .ui-menu-color-contact {
   background-color: #3498db;
 }
+
 .ui-menu-color-download {
   background-color: #525252;
 }
 
-/* -------------------------------------------------------------Heading */
+/*--------------------------------------------Special paddings/margins/text*/
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.general-sub {
+  font-family: Exo, sans-serif;
+  font-weight: 300;
+  color: #fafafa;
+}
+
+/*--------------------------------------------Heading*/
+
+header {
+  margin: 0;
+}
+
+.heading {
+  margin-left: 50px;
+}
+
 .logo {
-  background: url(../img/rosie.jpg);
+  background: url('../img/rosie.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,12 +61,8 @@
   -webkit-transition: all 0.5s ease-in-out;
 }
 
-.heading {
-  margin-left: 50px;
-}
-
 .name {
-  font-family: Exo, sans-serif;
+  font-family: 'Exo', sans-serif;
   font-weight: 100;
   font-size: 46px;
   margin-top: 50px;
@@ -47,7 +70,7 @@
 }
 
 .title {
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 200;
   font-size: 28px;
   margin-top: 20px;
@@ -62,25 +85,27 @@
 .menucontainer {
   font-size: 0;
 }
-#nav {
-  margin: 0;
-}
 
 #nav li {
   font-size: 14px;
   padding: 0;
 }
 
+#nav {
+  margin: 0;
+}
+
 .menuitem {
+  height: 120px;
   text-align: center;
   padding: 0;
-  height: 120px;
 }
 
 .menuitem a {
   width: 100%;
   text-decoration: none;
   color: #fff;
+  height: 120px;
 }
 
 .menuitem a i {
@@ -101,8 +126,18 @@
   letter-spacing: 2px;
 }
 
-/* -------------------------------------------------------------Hover.css */
+/*--------------------------------------------Hover.css*/
+
 .hvr-sweep-to-bottom:before {
-  background-color: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   height: 120px;
+}
+
+/* ----------------------------------------Footer */
+
+footer {
+  background-color: #525252;
+  color: #fafafa;
+  min-height: 120px;
+  margin: 0;
 }
