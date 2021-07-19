@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+/* -------------------------------------------------------------Colours */
 
+.bg-color-name-title {
+  background-color: #676767;
+}
+
+/* -------------------------------------------------------------Heading */
 .logo {
   background: url(../img/rosie.jpg);
   background-position: center;
@@ -15,4 +20,25 @@
   transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
+}
+
+.heading {
+  margin-left: 50px;
+}
+
+.name {
+  font-family: Exo, sans-serif;
+  font-weight: 100;
+  font-size: 46px;
+  margin-top: 50px;
+  color: #fff;
+}
+
+.title {
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 90px;
+  color: #fff;
 }
