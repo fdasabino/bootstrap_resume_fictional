@@ -9,7 +9,10 @@ ol,
 ul {
   list-style: none;
 }
-
+input[placeholder] {
+  text-align: center;
+  font-size: 12px;
+}
 input,
 textarea {
   margin: 0 auto;
@@ -171,7 +174,6 @@ img {
 #gh-username {
   display: block;
   padding: 5px 8px;
-  font-size: 1.4em;
   color: #666;
   max-width: 550px;
   margin-bottom: 15px;

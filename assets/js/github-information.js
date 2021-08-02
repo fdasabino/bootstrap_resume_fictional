@@ -11,7 +11,7 @@ function repoInformationHTML(repos) {
   let listItemsHTML = repos.map((repo) => {
     return `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`;
   });
-  return `<div class="clearfix repo-list"><p>Repo List:</p>
+  return `<div class="clearfix repo-list text-center"><p>Repo List:</p>
   <ul>
   ${listItemsHTML.join("\n")}
   </ul>
@@ -23,7 +23,9 @@ function fetchGitHubInformation(event) {
   $("#gh-user-repo").html("");
   let username = $("#gh-username").val();
   if (!username) {
-    $("#gh-user-data").html(`<h2>Please Enter a GitHub Username</h2>`);
+    $("#gh-user-data").html(
+      `<h2 class="text-center">Please Enter a GitHub Username</h2>`
+    );
     return;
   }
   $("#gh-user-data").html(`<div id="loader">
@@ -42,11 +44,20 @@ function fetchGitHubInformation(event) {
     },
     (errorResponse) => {
       if (errorResponse.status === 404) {
-        $("#gh-user-data").html(`<h2>Username ${username} not found</h2>`);
+        $("#gh-user-data").html(
+          `<h2 class="text-center" text-center>Username ${username} not found</h2>`
+        );
+      } else if (errorResponse.status === 403) {
+        let resetTime = new Date(
+          errorResponse.getResponseHeader("x-RateLimit-Reset") * 1000
+        );
+        $("#gh-user-data").html(
+          `<h4 class="text-center">Too many requests, please wait until ${resetTime.toLocaleTimeString()}</h4>`
+        );
       } else {
         console.log(errorResponse);
         $("#gh-user-data").html(
-          `<h2>Error: ${errorResponse.responseJSON.message}</h2>`
+          `<h2 class="text-center">Error: ${errorResponse.responseJSON.message}</h2>`
         );
       }
     }
