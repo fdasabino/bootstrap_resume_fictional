@@ -1,4 +1,5 @@
 {
   "cSpell.words": ["Odenkirk"],
-  "cSpell.ignoreWords": ["menucontainer", "pinterest", "riverdale"]
+  "cSpell.ignoreWords": ["clearfix", "menucontainer", "pinterest", "riverdale"],
+  "editor.formatOnSave": true
 }
