@@ -365,6 +365,9 @@ footer .cv-pdf i:hover {
   margin: 0 auto;
   max-width: 70%;
 }
+.center-form textarea {
+  resize: none;
+}
 
 button[type="submit"] {
   margin-top: 15px;
